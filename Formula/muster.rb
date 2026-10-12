@@ -5,21 +5,21 @@
 class Muster < Formula
   desc "Harness-neutral briefs, workers, and routing for coding agents"
   homepage "https://github.com/mlaccetti/muster"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mlaccetti/muster/releases/download/v0.1.0/muster_0.1.0_darwin_amd64.tar.gz"
-      sha256 "80185ec6e11488869aa214f51407fbd7612db479695ce84464fac8e20e17ffa4"
+      url "https://github.com/mlaccetti/muster/releases/download/v0.1.1/muster_0.1.1_darwin_amd64.tar.gz"
+      sha256 "cf54a3b298710d9388600bd54ab64d978b85dda9cf772959ddc48c085f60bc13"
 
       define_method(:install) do
         bin.install "muster"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mlaccetti/muster/releases/download/v0.1.0/muster_0.1.0_darwin_arm64.tar.gz"
-      sha256 "92cca048f0163b082b7cb21d38779751640d0ad6933597f6a39e559664caccda"
+      url "https://github.com/mlaccetti/muster/releases/download/v0.1.1/muster_0.1.1_darwin_arm64.tar.gz"
+      sha256 "6b5ae0a12edb72b07d5f9042d1bda880239650ca0ad3a977ad25f3712fa548b7"
 
       define_method(:install) do
         bin.install "muster"
@@ -29,15 +29,15 @@ class Muster < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mlaccetti/muster/releases/download/v0.1.0/muster_0.1.0_linux_amd64.tar.gz"
-      sha256 "9a9fee9594abadd1cb51c8368ce71f63589a75292299f7c8320313a82985fb44"
+      url "https://github.com/mlaccetti/muster/releases/download/v0.1.1/muster_0.1.1_linux_amd64.tar.gz"
+      sha256 "1acc3fb2d0b044f60e8ff9ef191bdaadfc4346db1ffb797b7539910137eb7746"
       define_method(:install) do
         bin.install "muster"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mlaccetti/muster/releases/download/v0.1.0/muster_0.1.0_linux_arm64.tar.gz"
-      sha256 "a44e8cb00a993d991c218482fd23fa1f1b7310e59c1bb6a38572eda6869f9481"
+      url "https://github.com/mlaccetti/muster/releases/download/v0.1.1/muster_0.1.1_linux_arm64.tar.gz"
+      sha256 "8c9d009237a67efc8b3bae0eb951ece2a0034d560a96910dee93b7ff506f84ee"
       define_method(:install) do
         bin.install "muster"
       end
