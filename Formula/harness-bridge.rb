@@ -5,46 +5,59 @@
 class HarnessBridge < Formula
   desc "Bridge coding-agent sessions between CLIs"
   homepage "https://github.com/mlaccetti/harness-bridge"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.1/harness-bridge_0.1.1_darwin_amd64.tar.gz"
-      sha256 "db04c66e1f5d6681da8cc58450a6eef09d1b5917c37ed175f434bf766259a3b8"
+      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.2/harness-bridge_0.1.2_darwin_amd64.tar.gz"
+      sha256 "d00a69f31688b13476427d5a67decc0ce168239cd2a28fee6f7f9942af895483"
 
       define_method(:install) do
         bin.install "harness-bridge"
+        bin.install_symlink "harness-bridge", "hb"
+        bin.install_symlink "harness-bridge", "sb"
+        bin.install_symlink "harness-bridge", "session-bridge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.1/harness-bridge_0.1.1_darwin_arm64.tar.gz"
-      sha256 "659eead334781f42ab19949bebeb44ca3d73d245bf207b5b634ffb71ae6ca6a4"
+      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.2/harness-bridge_0.1.2_darwin_arm64.tar.gz"
+      sha256 "24d76e88285a06e60b7c6b57d58c676286b5ad89c6ba06459e94ad2cb501ab12"
 
       define_method(:install) do
         bin.install "harness-bridge"
+        bin.install_symlink "harness-bridge", "hb"
+        bin.install_symlink "harness-bridge", "sb"
+        bin.install_symlink "harness-bridge", "session-bridge"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.1/harness-bridge_0.1.1_linux_amd64.tar.gz"
-      sha256 "2943204565050a8f15c737b72b1bab3857f7a29f3a24d35d764fc86b25848b9c"
+      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.2/harness-bridge_0.1.2_linux_amd64.tar.gz"
+      sha256 "9e0aaac1d139b3e8a194f34550a0ed2e709c6d6a1e65b8c1b34c13e569f5052a"
       define_method(:install) do
         bin.install "harness-bridge"
+        bin.install_symlink "harness-bridge", "hb"
+        bin.install_symlink "harness-bridge", "sb"
+        bin.install_symlink "harness-bridge", "session-bridge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.1/harness-bridge_0.1.1_linux_arm64.tar.gz"
-      sha256 "ae1d8ff71e544c9b52cf1a4ea5dedeb13897919df357e1dd82a8ef42f440bd6d"
+      url "https://github.com/mlaccetti/harness-bridge/releases/download/v0.1.2/harness-bridge_0.1.2_linux_arm64.tar.gz"
+      sha256 "39b1c919af71bda0a19d0bbca702583815af3a4efdc347224c37118fa7d39743"
       define_method(:install) do
         bin.install "harness-bridge"
+        bin.install_symlink "harness-bridge", "hb"
+        bin.install_symlink "harness-bridge", "sb"
+        bin.install_symlink "harness-bridge", "session-bridge"
       end
     end
   end
 
   test do
     system "#{bin}/harness-bridge", "--version"
+    system "#{bin}/hb", "--version"
   end
 end
