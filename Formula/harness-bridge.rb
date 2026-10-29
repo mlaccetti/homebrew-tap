@@ -15,9 +15,9 @@ class HarnessBridge < Formula
 
       define_method(:install) do
         bin.install "harness-bridge"
-        bin.install_symlink "harness-bridge", "hb"
-        bin.install_symlink "harness-bridge", "sb"
-        bin.install_symlink "harness-bridge", "session-bridge"
+        bin.install_symlink "harness-bridge" => "hb"
+        bin.install_symlink "harness-bridge" => "sb"
+        bin.install_symlink "harness-bridge" => "session-bridge"
       end
     end
     if Hardware::CPU.arm?
@@ -26,9 +26,9 @@ class HarnessBridge < Formula
 
       define_method(:install) do
         bin.install "harness-bridge"
-        bin.install_symlink "harness-bridge", "hb"
-        bin.install_symlink "harness-bridge", "sb"
-        bin.install_symlink "harness-bridge", "session-bridge"
+        bin.install_symlink "harness-bridge" => "hb"
+        bin.install_symlink "harness-bridge" => "sb"
+        bin.install_symlink "harness-bridge" => "session-bridge"
       end
     end
   end
@@ -39,9 +39,9 @@ class HarnessBridge < Formula
       sha256 "b6c24e286f5dac664aab35e64078d86e9cf5d813e82dc183213b3f20c589e594"
       define_method(:install) do
         bin.install "harness-bridge"
-        bin.install_symlink "harness-bridge", "hb"
-        bin.install_symlink "harness-bridge", "sb"
-        bin.install_symlink "harness-bridge", "session-bridge"
+        bin.install_symlink "harness-bridge" => "hb"
+        bin.install_symlink "harness-bridge" => "sb"
+        bin.install_symlink "harness-bridge" => "session-bridge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -49,9 +49,9 @@ class HarnessBridge < Formula
       sha256 "e939e392bd209d5fb883bed904002af43be526872f7f56b098c6faa6e2be7921"
       define_method(:install) do
         bin.install "harness-bridge"
-        bin.install_symlink "harness-bridge", "hb"
-        bin.install_symlink "harness-bridge", "sb"
-        bin.install_symlink "harness-bridge", "session-bridge"
+        bin.install_symlink "harness-bridge" => "hb"
+        bin.install_symlink "harness-bridge" => "sb"
+        bin.install_symlink "harness-bridge" => "session-bridge"
       end
     end
   end
